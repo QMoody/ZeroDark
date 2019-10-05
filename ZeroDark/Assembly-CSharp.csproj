@@ -69,6 +69,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\ZeroDark\Scripts\LightController.cs" />
     <Compile Include="Assets\ZeroDark\Scripts\PlayerController.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
@@ -78,6 +79,9 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -94,17 +98,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>D:/Main/Projects/Video Games/GitHub Project Save/ZeroDark/ZeroDark/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
