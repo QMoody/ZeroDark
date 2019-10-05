@@ -699,8 +699,11 @@ MonoBehaviour:
   rbShpere: {fileID: 0}
   playerCon: {fileID: 0}
   lightFollowSpeed: 0.2
-  throwForce: 3
+  throwForce: 4
   isHolding: 1
+  isThrown: 0
+  isLeading: 0
+  checkBack: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1087,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!1 &1332034659
 GameObject:
