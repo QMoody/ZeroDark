@@ -113,7 +113,7 @@ public class LightController : MonoBehaviour
 
     IEnumerator MouseHoldCheck()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         if(isThrown == false)
             isLeading = true;
     }

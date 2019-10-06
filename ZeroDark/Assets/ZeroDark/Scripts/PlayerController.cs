@@ -9,11 +9,15 @@ public class PlayerController : MonoBehaviour
     public GameObject playerModel;
     public GameObject playerCamera;
     private Rigidbody rbPlayer;
+    public Animator anim;
 
     [Header("Movement Variables")] // MOVEMENT VARIABLES
     public float walkAccelSpeed;
     public float walkSpeed;
+    public float runSpeed;
     private float currentForwardSpeed;
+
+    public bool isRunning;
 
     public float turnSpeed;
 
@@ -28,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rbPlayer = GetComponent<Rigidbody>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
     void Start()
@@ -40,19 +45,31 @@ public class PlayerController : MonoBehaviour
     {
         StandardMovement();
         CameraFollow();
+        CharacterAnimations();
     }
 
     #region Movement
     void StandardMovement()
     {
         float step = Time.deltaTime;
+        Vector3 moveDir;
 
         if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
             currentForwardSpeed = Mathf.MoveTowards(currentForwardSpeed, 1, step * walkAccelSpeed);
         else
             currentForwardSpeed = Mathf.MoveTowards(currentForwardSpeed, 0, step * walkAccelSpeed);
 
-        Vector3 moveDir = transform.forward * -currentForwardSpeed * walkSpeed;
+        if (Input.GetButton("Shift"))
+        {
+            moveDir = transform.forward * -currentForwardSpeed * walkSpeed * runSpeed;
+            isRunning = true;
+        }
+        else
+        {
+            moveDir = transform.forward * -currentForwardSpeed * walkSpeed;
+            isRunning = false;
+        }
+
         rbPlayer.velocity = Vector3.MoveTowards(rbPlayer.velocity, new Vector3(moveDir.x, rbPlayer.velocity.y, moveDir.z), step * 20);
 
         Vector3 targetDir = new Vector3(-Input.GetAxisRaw("Vertical"), 0, Input.GetAxisRaw("Horizontal"));
@@ -65,4 +82,10 @@ public class PlayerController : MonoBehaviour
         playerCamera.transform.position = transform.position + camDistanceTarget;
     }
     #endregion
+
+    void CharacterAnimations()
+    {
+        anim.SetFloat("InputForward", currentForwardSpeed);
+        anim.SetBool("Running", isRunning);
+    }
 }
