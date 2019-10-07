@@ -94,7 +94,6 @@ public class LightController : MonoBehaviour
             isLeading = false;
             isHolding = true;
         }
-
     }
 
     void CheckThrow()
